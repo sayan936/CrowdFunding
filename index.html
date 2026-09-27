@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fund My iPhone 17 — Crowdfunding Campaign</title>
+  <meta name="description" content="Help Sayan get the new iPhone 17! A fun, transparent crowdfunding campaign. Every contribution counts — back this dream today." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📱</text></svg>" />
+</head>
+<body>
+
+  <!-- Animated Background -->
+  <div class="bg-grid"></div>
+  <div class="bg-orbs">
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="#" class="logo">
+        <div class="logo-icon">📱</div>
+        FundMyPhone
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#progress">Progress</a></li>
+        <li><a href="#why">Why</a></li>
+        <li><a href="#tiers">Contribute</a></li>
+        <li><a href="#supporters">Supporters</a></li>
+      </ul>
+      <a href="#tiers" class="btn-nav-cta">Back This Project</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          Live Campaign
+        </div>
+        <h1>Help Me Get the <br/><span class="gradient-text">iPhone 17 Pro</span></h1>
+        <p class="hero-subtitle">
+          I'm a developer & creator who needs the latest iPhone for app testing, content creation, and pushing the boundaries of mobile innovation. Your support makes it happen!
+        </p>
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="openModal()">
+            ❤️ Contribute Now
+          </button>
+          <a href="#why" class="btn-secondary">
+            Learn More ↓
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-value" id="statBackers">0</span>
+            <span class="hero-stat-label">Backers</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-value" id="statDays">30</span>
+            <span class="hero-stat-label">Days Left</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-value" id="statPercent">0%</span>
+            <span class="hero-stat-label">Funded</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-wrapper">
+          <div class="hero-glow"></div>
+          <img src="iphone-hero.jpg" alt="iPhone 17 Pro — the dream device" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Progress Section -->
+  <section class="progress-section" id="progress">
+    <div class="progress-card reveal">
+      <div class="progress-header">
+        <div class="progress-amount">
+          <span class="currency">₹</span><span class="raised" id="raisedAmount">0</span>
+        </div>
+        <div class="progress-goal">raised of <span>₹1,34,900</span> goal</div>
+      </div>
+      <div class="progress-bar-track">
+        <div class="progress-bar-fill" id="progressBar"></div>
+      </div>
+      <div class="progress-meta">
+        <div class="progress-meta-item">
+          <div class="progress-meta-icon">👥</div>
+          <div class="progress-meta-value" id="metaBackers">0</div>
+          <div class="progress-meta-label">Total Backers</div>
+        </div>
+        <div class="progress-meta-item">
+          <div class="progress-meta-icon">⏳</div>
+          <div class="progress-meta-value">30</div>
+          <div class="progress-meta-label">Days Left</div>
+        </div>
+        <div class="progress-meta-item">
+          <div class="progress-meta-icon">🎯</div>
+          <div class="progress-meta-value" id="metaPercent">0%</div>
+          <div class="progress-meta-label">Funded</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Section -->
+  <section class="why-section" id="why">
+    <div class="section-heading reveal">
+      <div class="overline">The Mission</div>
+      <h2>Why I Need the iPhone 17 Pro</h2>
+      <p>This isn't just a phone — it's a tool that supercharges my work and creativity.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon">💻</div>
+        <h3>App Development & Testing</h3>
+        <p>I build iOS apps and need the latest hardware to test cutting-edge features like the new camera APIs, Apple Intelligence, and USB-C performance.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">🎥</div>
+        <h3>Content Creation</h3>
+        <p>The Pro camera system with 48MP fusion lens lets me produce stunning videos and photos for my social media and YouTube content.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">🚀</div>
+        <h3>Stay on the Cutting Edge</h3>
+        <p>From A19 Pro chip to ProMotion display — I need to stay current to deliver the best work and explore the future of mobile tech.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tiers Section -->
+  <section class="tiers-section" id="tiers">
+    <div class="section-heading reveal">
+      <div class="overline">Contribute</div>
+      <h2>Choose Your Support Tier</h2>
+      <p>Every contribution brings me closer to the goal. Pick a tier that feels right!</p>
+    </div>
+    <div class="tiers-grid">
+      <!-- Tier 1 -->
+      <div class="tier-card reveal">
+        <div class="tier-emoji">☕</div>
+        <div class="tier-name">Coffee Supporter</div>
+        <div class="tier-price"><span class="currency-symbol">₹</span>50</div>
+        <div class="tier-description">Buy me a virtual coffee and fuel the dream!</div>
+        <ul class="tier-perks">
+          <li><span class="check">✓</span> Thank you shoutout</li>
+          <li><span class="check">✓</span> Name on supporters wall</li>
+          <li><span class="check">✓</span> Eternal gratitude 💙</li>
+        </ul>
+        <button class="btn-tier" onclick="openModal(50)">Contribute ₹50</button>
+      </div>
+      <!-- Tier 2 (Featured) -->
+      <div class="tier-card featured reveal">
+        <div class="tier-popular">⭐ Most Popular</div>
+        <div class="tier-emoji">🎯</div>
+        <div class="tier-name">Power Backer</div>
+        <div class="tier-price"><span class="currency-symbol">₹</span>500</div>
+        <div class="tier-description">Make a real impact and get exclusive perks!</div>
+        <ul class="tier-perks">
+          <li><span class="check">✓</span> Everything in Coffee tier</li>
+          <li><span class="check">✓</span> Personal thank-you video</li>
+          <li><span class="check">✓</span> Early access to my apps</li>
+          <li><span class="check">✓</span> Behind-the-scenes content</li>
+        </ul>
+        <button class="btn-tier primary" onclick="openModal(500)">Contribute ₹500</button>
+      </div>
+      <!-- Tier 3 -->
+      <div class="tier-card reveal">
+        <div class="tier-emoji">💎</div>
+        <div class="tier-name">Legend Sponsor</div>
+        <div class="tier-price"><span class="currency-symbol">₹</span>1,000</div>
+        <div class="tier-description">Be a legend — massive impact & top-tier rewards!</div>
+        <ul class="tier-perks">
+          <li><span class="check">✓</span> Everything in Power tier</li>
+          <li><span class="check">✓</span> 1-on-1 video call with me</li>
+          <li><span class="check">✓</span> Name in my app credits</li>
+          <li><span class="check">✓</span> Custom iPhone wallpaper</li>
+          <li><span class="check">✓</span> Lifetime supporter badge</li>
+        </ul>
+        <button class="btn-tier" onclick="openModal(1000)">Contribute ₹1,000</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Supporters -->
+  <section class="supporters-section" id="supporters">
+    <div class="section-heading reveal">
+      <div class="overline">Community</div>
+      <h2>Recent Supporters</h2>
+      <p>These amazing people are making the dream happen. Join them!</p>
+    </div>
+    <div class="supporters-list" id="supportersList">
+      <!-- Populated by JS -->
+    </div>
+  </section>
+
+  <!-- Payment Modal (Multi-Step) -->
+  <div class="modal-overlay" id="donationModal">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+
+      <!-- ===== STEP 1: Amount & Info ===== -->
+      <div class="modal-step" id="modalStep1">
+        <h2>❤️ Make a Contribution</h2>
+        <p>Your generosity brings me one step closer to the iPhone 17 Pro!</p>
+        <div class="amount-presets" id="amountPresets">
+          <button class="amount-preset" data-amount="50">₹50</button>
+          <button class="amount-preset" data-amount="100">₹100</button>
+          <button class="amount-preset" data-amount="500">₹500</button>
+          <button class="amount-preset" data-amount="1000">₹1,000</button>
+        </div>
+        <div class="form-group">
+          <label for="customAmount">Custom Amount (₹)</label>
+          <input type="number" id="customAmount" placeholder="Enter amount" min="1" />
+        </div>
+        <div class="form-group">
+          <label for="donorName">Your Name</label>
+          <input type="text" id="donorName" placeholder="John Doe" />
+        </div>
+        <div class="form-group">
+          <label for="donorMessage">Leave a Message (optional)</label>
+          <textarea id="donorMessage" placeholder="Good luck with the campaign! 🚀"></textarea>
+        </div>
+        <button class="btn-donate" onclick="goToPaymentStep()">
+          Continue to Payment →
+        </button>
+      </div>
+
+      <!-- ===== STEP 2: UPI Payment ===== -->
+      <div class="modal-step" id="modalStep2" style="display:none">
+        <h2>📱 Pay via UPI</h2>
+        <p class="payment-amount-display">Pay <strong id="payAmountDisplay">₹0</strong> to complete your contribution</p>
+
+        <!-- Payment method tabs -->
+        <div class="payment-tabs">
+          <button class="payment-tab active" data-tab="qr" onclick="switchPayTab('qr')">📷 Scan QR</button>
+          <button class="payment-tab" data-tab="upi-app" onclick="switchPayTab('upi-app')">📲 UPI App</button>
+          <button class="payment-tab" data-tab="upi-id" onclick="switchPayTab('upi-id')">📋 UPI ID</button>
+        </div>
+
+        <!-- Tab: QR Code -->
+        <div class="payment-tab-content active" id="tabQr">
+          <div class="qr-container">
+            <img src="upi-qr.jpg" alt="Scan this UPI QR code to pay" class="qr-image" id="qrImage" />
+            <div class="qr-caption">Open any UPI app → Scan QR → Pay ₹<span id="qrAmount">0</span></div>
+          </div>
+        </div>
+
+        <!-- Tab: Open UPI App (mobile deep link) -->
+        <div class="payment-tab-content" id="tabUpiApp">
+          <div class="upi-app-grid">
+            <a href="#" id="upiLinkGpay" class="upi-app-btn" target="_blank" rel="noopener">
+              <span class="upi-app-icon">💚</span>
+              <span>Google Pay</span>
+            </a>
+            <a href="#" id="upiLinkPhonepe" class="upi-app-btn" target="_blank" rel="noopener">
+              <span class="upi-app-icon">💜</span>
+              <span>PhonePe</span>
+            </a>
+            <a href="#" id="upiLinkPaytm" class="upi-app-btn" target="_blank" rel="noopener">
+              <span class="upi-app-icon">💙</span>
+              <span>Paytm</span>
+            </a>
+            <a href="#" id="upiLinkGeneric" class="upi-app-btn" target="_blank" rel="noopener">
+              <span class="upi-app-icon">🔗</span>
+              <span>Any UPI App</span>
+            </a>
+          </div>
+          <div class="upi-app-note">
+            💡 These buttons work best on mobile. Tap to open your UPI app directly.
+          </div>
+        </div>
+
+        <!-- Tab: Copy UPI ID -->
+        <div class="payment-tab-content" id="tabUpiId">
+          <div class="upi-id-card">
+            <div class="upi-id-label">Send money to this UPI ID:</div>
+            <div class="upi-id-value" id="upiIdDisplay">yourname@upi</div>
+            <button class="btn-copy-upi" onclick="copyUpiId()">
+              <span id="copyBtnText">📋 Copy UPI ID</span>
+            </button>
+            <div class="upi-id-instructions">
+              <div class="upi-step"><span class="upi-step-num">1</span> Open any UPI app (GPay, PhonePe, Paytm, etc.)</div>
+              <div class="upi-step"><span class="upi-step-num">2</span> Go to "Send Money" → "Pay to UPI ID"</div>
+              <div class="upi-step"><span class="upi-step-num">3</span> Paste the UPI ID above and enter ₹<span id="upiIdAmount">0</span></div>
+              <div class="upi-step"><span class="upi-step-num">4</span> Complete payment and click "I've Paid" below</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="payment-actions">
+          <button class="btn-back" onclick="goToStep(1)">← Back</button>
+          <button class="btn-donate" onclick="confirmPayment()">✅ I've Paid</button>
+        </div>
+      </div>
+
+      <!-- ===== STEP 3: Confirmation ===== -->
+      <div class="modal-step" id="modalStep3" style="display:none">
+        <div class="confirmation-content">
+          <div class="confirmation-icon">🎉</div>
+          <h2>Thank You!</h2>
+          <p class="confirmation-message" id="confirmationMessage">Your contribution has been recorded. You're awesome!</p>
+          <div class="confirmation-details">
+            <div class="confirmation-detail">
+              <span class="confirmation-label">Amount</span>
+              <span class="confirmation-value" id="confirmAmount">₹0</span>
+            </div>
+            <div class="confirmation-detail">
+              <span class="confirmation-label">Name</span>
+              <span class="confirmation-value" id="confirmName">-</span>
+            </div>
+            <div class="confirmation-detail">
+              <span class="confirmation-label">Status</span>
+              <span class="confirmation-value confirmation-pending">⏳ Pending Verification</span>
+            </div>
+          </div>
+          <p class="confirmation-note">Your contribution will appear on the supporters wall once verified. This usually takes a few minutes.</p>
+          <button class="btn-donate" onclick="closeModal()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">
+    <span>✅</span>
+    <span id="toastMessage">Thank you for your contribution!</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Made with <span class="heart">❤️</span> by Sayan · FundMyPhone © 2026</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
